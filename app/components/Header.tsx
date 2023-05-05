@@ -20,9 +20,9 @@ export default function Header() {
 
   return <header>
     <nav className="bg-slate-950 p-3 flex flex-row">
-      <h1 className="text-slate-100 text-left">
+      <button className="text-slate-100 text-left">
         {metadata.title}
-      </h1>
+      </button>
       <button
         className="text-slate-100 hover:text-slate-300 ml-auto"
         onClick={handleMenuClick}

@@ -13,4 +13,12 @@
               rgba(148,187,233,1) 100%
     );
   }
+  .rotate-icon {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .dropdown-open .rotate-icon {
+    transform: rotate(-90deg);
+  }
 }

@@ -50,7 +50,7 @@ export default function DropdownMenu() {
         {genres.map((genre) => {
           return (
             <li key={uuidv4()}>
-              <Link className="text-sm hover:bg-gray-200 block px-4 py-2" href={`/movies/genre/${genre.name}`}>
+              <Link className="text-sm hover:bg-gray-200 block px-4 py-2" href={`movies?category=${genre.name}`}>
                 {genre.name}
               </Link>
             </li>

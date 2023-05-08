@@ -21,7 +21,7 @@ export default function Header() {
   return <header>
     <nav className="bg-slate-950 p-3 flex flex-row">
       <button className="text-slate-100 text-left">
-        {metadata.title}
+        <Link href="/"> {metadata.title} </Link>
       </button>
       <button
         className="text-slate-100 hover:text-slate-300 ml-auto"

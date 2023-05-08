@@ -21,7 +21,7 @@ export default function Sidebar({ isOpen, onClose }: Props) {
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
     >
-      <div className="fixed top-0 right-0 h-full w-64 bg-white z-10 shadow-lg">
+      <div className="fixed top-0 right-0 h-full w-64 bg-sakila-10 z-10 shadow-lg">
         <div className="p-3">
           <h3 className="text-gray-800 font-bold text-xl mb-3">Menu</h3>
           <ul className="mt-2">
@@ -29,12 +29,12 @@ export default function Sidebar({ isOpen, onClose }: Props) {
               <DropdownMenu />
             </li>
             <button>
-              <Link href="/actors" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Näyttelijät</Link>
+              <Link href="/actors" className="block px-4 py-2 text-sakila-20 hover:bg-gray-200">Näyttelijät</Link>
             </button>
           </ul>
         </div>
         <button
-          className="absolute top-3 right-3 text-gray-400 hover:text-gray-600"
+          className="absolute top-3 right-3 text-sakila-20 hover:text-gray-600"
           onClick={onClose}
         >
           <svg

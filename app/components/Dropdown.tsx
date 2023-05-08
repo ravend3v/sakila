@@ -35,11 +35,11 @@ export default function DropdownMenu() {
   return (
     <div className="relative">
       <div className="flex">
-        <button className="mr-2 px-4 hover:bg-gray-200">
+        <button className="mr-2 px-4 text-sakila-20 hover:bg-gray-200">
           <Link href="/movies">{metadata.title}</Link>
         </button>
         <button
-          className="text-gray-700 hover:bg-gray-200 py-2 flex items-center"
+          className="text-sakila-20 hover:bg-gray-200 py-2 flex items-center"
           onClick={toggleDropdown}
         >
           <FontAwesomeIcon icon={faChevronLeft} />

@@ -1,6 +1,7 @@
 "use client";
 import { Waypoint } from "react-waypoint";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 type actor = {
   first_name: string;
@@ -27,9 +28,13 @@ export default function Page() {
     <div className="flex flex-wrap gap-4 py-2 ">
       {actors.map((actor: actor) => {
         return (
-          <div key={actor.actor_id} className="w-52 bg-slate-400 rounded-lg p-3 ">
-            <h1 className="py-12 text-center">{actor.first_name} {actor.last_name}</h1>
-          </div>
+          <Link
+            href={`/movies?actor=${actor.actor_id}`}
+            key={actor.first_name}
+            className="w-52 bg-slate-400 rounded-lg p-3"
+          >
+            <h1>{actor.first_name + " " + actor.last_name}</h1>
+          </Link>
         );
       })}
       <Waypoint onEnter={handleWaypointEnter} />

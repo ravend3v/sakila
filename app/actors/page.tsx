@@ -1,6 +1,7 @@
 "use client";
 import { Waypoint } from "react-waypoint";
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 type actor = {
@@ -10,10 +11,13 @@ type actor = {
 };
 
 export default function Page() {
-  const [actors, setActors] = useState<actor[]>([]);
+  const [actors, setActors] = useState<Array<actor>>([]);
   const [page, setPage] = useState<number>(1);
+
   useEffect(() => {
-    fetch(`http://localhost:3000/api/db/actors?page=${page}`)
+    const url = `http://localhost:3000/api/db/actors?page=${page}`
+
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         setActors((prevActors) => [...prevActors, ...data]);
@@ -30,8 +34,8 @@ export default function Page() {
         return (
           <Link
             href={`/movies?actor=${actor.actor_id}`}
-            key={actor.first_name}
-            className="w-52 bg-slate-400 rounded-lg p-3"
+            key={`${actor.first_name}-${actor.actor_id}`}
+            className="w-52 bg-slate-500 rounded-lg p-3"
           >
             <h1>{actor.first_name + " " + actor.last_name}</h1>
           </Link>

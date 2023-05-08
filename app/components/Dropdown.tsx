@@ -35,18 +35,18 @@ export default function DropdownMenu() {
   return (
     <div className="relative">
       <div className="flex">
-        <button className="mr-2">
+        <button className="mr-2 px-4 hover:bg-gray-200">
           <Link href="/movies">{metadata.title}</Link>
         </button>
         <button
-          className="text-gray-700 hover:bg-gray-200 px-4 py-2 flex items-center"
+          className="text-gray-700 hover:bg-gray-200 py-2 flex items-center"
           onClick={toggleDropdown}
         >
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
       </div>
       <ul className={`right-2 bg-white py-2 rounded-lg shadow-lg ${isOpen ? 'block' : 'hidden'}`}>
-        <h2>Kategoriat: </h2>
+        
         {genres.map((genre) => {
           return (
             <li key={uuidv4()}>

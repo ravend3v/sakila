@@ -2,6 +2,9 @@ import { Transition } from "@headlessui/react";
 import DropdownMenu from "./Dropdown";
 import Link from "next/link";
 
+const metadata = {
+  title: 'Näyttelijät'
+}
 interface Props {
   isOpen: boolean;
   onClose: () => void;
@@ -25,8 +28,9 @@ export default function Sidebar({ isOpen, onClose }: Props) {
             <li>
               <DropdownMenu />
             </li>
-            <li> <Link href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Link 2</Link></li>
-            <li> <Link href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Link 3</Link></li>
+            <button>
+              <Link href="/actors" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Näyttelijät</Link>
+            </button>
           </ul>
         </div>
         <button

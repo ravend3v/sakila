@@ -34,13 +34,8 @@ export default function Page() {
         return (
           <Link
             href={`/movies?actor=${actor.actor_id}`}
-<<<<<<< HEAD
             key={actor.first_name}
             className="w-52 bg-sakila-10 rounded-lg p-3"
-=======
-            key={`${actor.first_name}-${actor.actor_id}`}
-            className="w-52 bg-slate-500 rounded-lg p-3"
->>>>>>> 753e6654effab2492ba9d62259a9cea61ad0d7a9
           >
             <h1>{actor.first_name + " " + actor.last_name}</h1>
           </Link>

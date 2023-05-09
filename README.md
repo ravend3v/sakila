@@ -1,6 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## 1.Käynnistys ohje
+## 1. Jos et ole käyttänyt next.js aikaisemmin tässä avuliaita komentoja jos softa ei toimi
+
+````bash
+npm install next@latest react@latest react-dom@latest
+````
+
+## 2.Serverin käynnistys ohje
 
 Ensimmäisenä käynnistä serveri:
 
@@ -13,10 +19,14 @@ yarn dev
 # or
 pnpm dev
 ```
-## 2.Avaa projekti verkko selaimessa
+## 3.Avaa projekti verkko selaimessa
 avaa osoite [http://localhost:3000](http://localhost:3000) selaimessa ja sivu avautuu
 
 
+## 4. projektissa käytetyt node moduulit (nämä saatta joutua lataamaan)
 
+### 1. react-waypoint 
+
+### 2. mysql
 
 

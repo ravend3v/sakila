@@ -62,7 +62,7 @@ export default function Page() {
     <div className="flex flex-wrap gap-4">
       {movies.map((movie: movie) => {
         return (
-          <div key={movie.title} className="w-52 bg-slate-400 rounded-lg p-3">
+          <div key={movie.title} className="w-52 bg-sakila-10 rounded-lg p-3">
             <h1>{movie.title}</h1>
             <div className="text-sm">
               <p>Rating: {movie.rating}</p>

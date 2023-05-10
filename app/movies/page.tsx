@@ -59,10 +59,10 @@ export default function Page() {
   }
 
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap gap-4 " style={{ justifyContent: 'center' }}>
       {movies.map((movie: movie) => {
         return (
-          <div key={movie.title} className="w-52 bg-sakila-10 rounded-lg p-3">
+          <div key={movie.title} className="flex flex-wrap bg-sakila-10 rounded-lg p-3 flex-row w-1/4">
             <h1>{movie.title}</h1>
             <div className="text-sm">
               <p>Rating: {movie.rating}</p>

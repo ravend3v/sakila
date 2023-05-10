@@ -29,13 +29,13 @@ export default function Page() {
   };
   
   return (
-    <div className="flex flex-wrap gap-4 py-2 ">
+    <div className="w-50 flex flex-wrap gap-4 py-2 flex-row" style={{ justifyContent: 'center' }}>
       {actors.map((actor: actor) => {
         return (
           <Link
             href={`/movies?actor=${actor.actor_id}`}
             key={actor.actor_id}
-            className="w-52 bg-sakila-10 rounded-lg p-3"
+            className="bg-sakila-10 rounded-lg p-3 w-1/4"
           >
             <h1>{actor.first_name + " " + actor.last_name}</h1>
           </Link>

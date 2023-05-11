@@ -2,6 +2,7 @@
 import { Waypoint } from "react-waypoint";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import SearchBar from "../components/Searchbar";
 
 type movie = {
   description: string;
@@ -59,29 +60,34 @@ export default function Page() {
   }
 
   return (
-    <div className="flex flex-wrap gap-4 " style={{ justifyContent: 'center' }}>
-      {movies.map((movie: movie) => {
-        return (
-          <div key={movie.title} className="flex flex-wrap bg-sakila-10 rounded-lg p-3 flex-row w-1/4">
-            <h1>{movie.title}</h1>
-            <div className="text-sm">
-              <p>Rating: {movie.rating}</p>
-              <p>Release year: {movie.release_year}</p>
-              <p>Length: {movie.length}</p>
-              <p>Description: {movie.description}</p>
-              <p>Category: {movie.category}</p>
-              <p>Actors:  
-                {movie.actor_names}
-              </p>
+    <div>
+      <div className="py-4">
+        <SearchBar />
+      </div>
+      <div className="flex flex-wrap gap-4 " style={{ justifyContent: 'center' }}>
+        {movies.map((movie: movie) => {
+          return (
+            <div key={movie.title} className="flex flex-wrap bg-sakila-10 rounded-lg p-3 flex-row w-1/4">
+              <h1>{movie.title}</h1>
+              <div className="text-sm">
+                <p>Rating: {movie.rating}</p>
+                <p>Release year: {movie.release_year}</p>
+                <p>Length: {movie.length}</p>
+                <p>Description: {movie.description}</p>
+                <p>Category: {movie.category}</p>
+                <p>Actors:  
+                  {movie.actor_names}
+                </p>
+              </div>
             </div>
-          </div>
-        );
-      })}
-      <Waypoint
-        onEnter={() => {
-          loadMore();
-        }}
-      />
+          );
+        })}
+        <Waypoint
+          onEnter={() => {
+            loadMore();
+          }}
+        />
+      </div>
     </div>
   );
 }

@@ -25,8 +25,8 @@ avaa osoite [http://localhost:3000](http://localhost:3000) selaimessa ja sivu av
 
 ## 4. projektissa käytetyt node moduulit (nämä saatta joutua lataamaan)
 
-### 1. react-waypoint 
+### 1. npm react-waypoint 
 
-### 2. mysql
+### 2. npm mysql
 
 
